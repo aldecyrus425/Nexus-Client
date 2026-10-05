@@ -9,11 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Resource Include="..\..\..\..\Downloads\background.png" Link="Assets\background.png" />
+    <None Remove="Assets\background.png" />
+    <None Remove="Assets\coin.png" />
+    <None Remove="Assets\interest-rate.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <Content Include="..\..\..\..\Downloads\coin.png" Link="Assets\coin.png" />
+    <Content Include="..\..\..\..\Downloads\interest-rate.png" Link="Assets\interest-rate.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\background.png" />
+    <Resource Include="Assets\coin.png" />
+    <Resource Include="Assets\interest-rate.png" />
   </ItemGroup>
 
 </Project>

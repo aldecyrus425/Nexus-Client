@@ -11,48 +11,95 @@
         Height="1080"
         WindowState="Maximized">
     <Grid>
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
+        <Image Source="/Assets/background.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill"/>
 
-        <Border x:Name="NeonBorder"
-        Width="300" Height="300"
-        Background="Transparent"
-        CornerRadius="10" Padding="20"
-        RenderTransformOrigin="0.497,1.054"
-        Margin="810,693,810,87"
-        BorderThickness="3">
+        <Border Width="250" Background="#FF00142B" Margin="835,137,835,708" BorderBrush="#FF00EEF9" BorderThickness="1" Opacity="0.9" CornerRadius="5">
+            <StackPanel Margin="0,0,0,-1">
+                <TextBlock Text="Nexus Cient" TextAlignment="Center" Foreground="white" Margin="5" FontFamily="Arial Rounded MT Bold" />
+                <StackPanel>
+                    <Border Height="30" Margin="5,10,5,10" CornerRadius="2" Background="#FF0061FF">
+                        <Button Background="Transparent" BorderThickness="0" Cursor="Hand">
+                            <Grid Width="238" Height="30">
+                                <Image Source="/Assets/coin.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="Insert Coin" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Foreground="#FF010109" FontFamily="Bahnschrift SemiBold Condensed"/>
+                            </Grid>
+                        </Button>
+                    </Border>
+                    <Border Height="30" Margin="5,0,5,10" CornerRadius="2" Background="#FFF72E2E">
+                        <Button Background="Transparent" BorderThickness="0">
+                            <Grid Width="238" Height="30">
+                                <Image Source="/Assets/interest-rate.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="Rates" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Foreground="#FF010109" FontFamily="Bahnschrift SemiBold Condensed"/>
+                            </Grid>
+                        </Button>
+                    </Border>
+                    <Border Height="30" Margin="5,0,5,10" CornerRadius="2" Background="#FFF72E2E">
+                        <Button Background="#FFA21AC3" BorderThickness="0">
+                            <Grid Width="238" Height="30">
+                                <Image Source="/Assets/login.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="Member Login" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Foreground="#FF010109" FontFamily="Bahnschrift SemiBold Condensed"/>
+                            </Grid>
+                        </Button>
+                    </Border>
+                    <Border Height="30" Margin="5,0,5,10" CornerRadius="2" Background="#FFF72E2E">
+                        <Button Background="#FF0FE8C5" BorderThickness="0">
+                            <Grid Width="238" Height="30">
+                                <Image Source="/Assets/add-account.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="Create Account" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Foreground="#FF010109" FontFamily="Bahnschrift SemiBold Condensed" FontWeight="Bold"/>
+                            </Grid>
+                        </Button>
+                    </Border>
+                    <Border Height="30" Margin="5,0,5,10" CornerRadius="2" Background="#FFF72E2E">
+                        <Button Background="#FF15D04B" BorderThickness="0">
+                            <Grid Width="238" Height="30">
+                                <Image Source="/Assets/voucher.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                                <TextBlock Text="Voucher" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" Foreground="#FF010109" FontFamily="Bahnschrift SemiBold Condensed"/>
+                            </Grid>
+                        </Button>
+                    </Border>
 
-            <Border.BorderBrush>
-                <SolidColorBrush Color="#00FFFF"/>
-            </Border.BorderBrush>
-
-            <Border.Triggers>
-                <EventTrigger RoutedEvent="Border.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard RepeatBehavior="Forever">
-                            <ColorAnimationUsingKeyFrames
-                        Storyboard.TargetName="NeonBorder"
-                        Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)"
-                        Duration="0:0:2.5">
-                                <DiscreteColorKeyFrame KeyTime="0:0:0.0" Value="#00FFFF"/>
-                                <!-- neon cyan -->
-                                <DiscreteColorKeyFrame KeyTime="0:0:0.5" Value="#FF00FF"/>
-                                <!-- neon magenta -->
-                                <DiscreteColorKeyFrame KeyTime="0:0:1.0" Value="#39FF14"/>
-                                <!-- neon green -->
-                                <DiscreteColorKeyFrame KeyTime="0:0:1.5" Value="#FFFF00"/>
-                                <!-- neon yellow -->
-                                <DiscreteColorKeyFrame KeyTime="0:0:2.0" Value="#FF3131"/>
-                                <!-- neon red -->
-                            </ColorAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Border.Triggers>
-
-            <StackPanel>
-                <TextBlock Text="Welcome to NexusClient" FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
-                <Button Content="Start" Width="100" Margin="0,20,0,0"/>
+                </StackPanel>
             </StackPanel>
         </Border>
+
+        <!--For Insert Coin-->
+        <!--
+        <Border Width="250" Height="316" Background="#FF00142B" BorderBrush="#FF00EEF9" BorderThickness="1" Opacity="0.9" CornerRadius="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <StackPanel>
+        <TextBlock Text="Nexus Cient" TextAlignment="Center" Foreground="white" Margin="5" FontFamily="Arial Rounded MT Bold" />
+        <Border Height="192" Background="#FF2A415B" Margin="3,3,3,0" CornerRadius="2" Padding="10">
+            <StackPanel>
+                <TextBlock Text="Credits:" Foreground="White" HorizontalAlignment="Center" FontFamily="Bahnschrift Light SemiCondensed" FontSize="16"/>
+                <TextBlock Text="00" Foreground="White" HorizontalAlignment="Center" FontSize="30" Width="50" TextAlignment="Center" FontFamily="Bahnschrift" />
+                <TextBlock Text="Available Time :" TextAlignment="Center" Foreground="White" Margin="0,5,0,0"/>
+                <TextBlock Text="00:00:00" Foreground="White" HorizontalAlignment="Center" FontSize="25" TextAlignment="Center" FontFamily="Bahnschrift" />
+                <Border Height="1" Margin="10,0,10,0" Background="#FF272727" />
+                <TextBlock Text="Remaining Time :" TextAlignment="Center" Foreground="White" Margin="0,5,0,0"/>
+                <TextBlock Text="00:00:00" Foreground="White" HorizontalAlignment="Center" FontSize="25" TextAlignment="Center" FontFamily="Bahnschrift" />
+                <Border Height="1" Margin="10,0,10,0" Background="#FF272727" />
+            </StackPanel>
+        </Border>
+        <StackPanel Height="95" Width="247">
+            <Border Height="30" Margin="5,10,5,10" CornerRadius="2" Background="#FF0061FF">
+                <Button Background="Transparent" BorderThickness="0" Cursor="Hand">
+                    <Grid Width="238" Height="30">
+                        <Image Source="/Assets/check-mark.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="DONE" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift Light SemiCondensed" FontWeight="Bold" FontSize="15" Foreground="White"/>
+                    </Grid>
+                </Button>
+            </Border>
+            <Border Height="30" Margin="5,0,5,10" CornerRadius="2" Background="#FFF72E2E">
+                <Button Background="Transparent" BorderThickness="0">
+                    <Grid Width="238" Height="30">
+                        <Image Source="/Assets/delete.png" Width="20" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                        <TextBlock Text="Cancel" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bahnschrift Light SemiCondensed" FontWeight="Bold" FontSize="15" Foreground="White"/>
+                    </Grid>
+                </Button>
+            </Border>
+
+        </StackPanel>
+    </StackPanel>
+</Border>
+        -->
     </Grid>
 </Window>

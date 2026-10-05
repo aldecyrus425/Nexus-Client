@@ -19,3 +19,4 @@ C:\Users\admin\source\repos\NexusClient\NexusClient\obj\Debug\net9.0-windows\ref
 C:\Users\admin\source\repos\NexusClient\NexusClient\obj\Debug\net9.0-windows\NexusClient.pdb
 C:\Users\admin\source\repos\NexusClient\NexusClient\obj\Debug\net9.0-windows\NexusClient.genruntimeconfig.cache
 C:\Users\admin\source\repos\NexusClient\NexusClient\obj\Debug\net9.0-windows\ref\NexusClient.dll
+C:\Users\admin\source\repos\NexusClient\NexusClient\obj\Debug\net9.0-windows\NexusClient_Content.g.cs
